@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>酒店预订</title>
+    <style>
+    *{
+        padding:0px;
+        margin:0px;
+    }
+    a:link{
+        text-decoration:none;
+        }
+    a:visited{
+        text-decoration:none;
+    }
+    .shang{
+        height:864px;
+        width:1920px;
+    }
+    span{
+        display:inline-block;
+    }
+    .head{
+        border:none;
+        height:40px;
+        width:1920px;
+        background-color:#f5f5f5;
+        }
+    .head1{
+        padding-left: 890px;
+    }
+    .abc{
+        border:none;
+        font-size:15px;
+        color:#929292;
+    }
+    .logo{
+        left:345px ;
+    }
+    .search{
+        width: 59px;
+        height: 46px;
+        text-align:center;
+        border-left:1px solid black;
+        position: relative;
+        top:5px;
+        left: 800 px;
+    }
+    .gouwuche{
+        width: 34px;
+        height: 28px;
+        border: none;
+        position: relative;
+        top:-35px;
+        left:1080px;
+    }
+
+
+   <--! .box{
+        float:right;
+        width: 380px;
+        padding-left:200px;
+        margin: 40px auto;
+        font-size: 14px;-->
+    }
+    .fenlei{
+        left:45px;
+        width:1920px;
+        border:none;
+    }
+    .all{
+        width: 140px;
+        height: 29px;
+        padding-top:13px;
+        float: left;
+    }
+    .choice{
+        width: 100px;
+        height: 33px;
+        padding-top:13px;
+        text-align: center;
+        
+        margin-right: 50px;
+        text-decoration: none;
+    }
+    .middle{
+        height: 670px;
+        background-image:url(banner.png) ;
+        background-repeat:no-repeat ;
+        background-position:center;
+        height: 670px;
+        width: 1920px;
+        margin: 0 auto;
+    }
+    .small0{
+        width: 80px;
+        height: 585px;
+        background-color:black;
+        float: right;
+        position: fixed;
+        top:195px;
+        right: 0px;
+        padding: 0 2 0 2;
+    }
+    .small{
+        width:80px;
+        height: 115px;
+        position: relative;
+        top: 45px;
+        left: 25px;
+    }
+    hr{
+        height:1px;
+        border-top:1px solid #888888;      
+        }
+
+    .zhongjian{
+        width: 100%;
+        height: 200px; 
+        margin: 0 auto;  
+    }
+    .daohang{
+        height: 40px;
+        padding-top: 20px;
+        float:left;
+        width:100px;
+    }
+    .shangpinshu{
+       
+       
+        float:right;
+        color:#888;
+        font-size:10px;
+    }
+    .biaoge{
+        
+        height: 40px;
+        width: 1220px;
+        padding-top:1px solid #C0C0C0;
+        border-bottom: 1px solid #f5f5f5;
+        border-left: 1px solid #f5f5f5;
+        border-right: 1px solid #f5f5f5;
+        margin: 0 auto; 
+    }
+    .diyige{
+        height: 33px;
+        width: 100px;
+        background-color:#CFCFCF;
+        text-align: center;
+        padding-top:12px;
+        float: left;
+        color:black;   
+    }
+    .later{
+        height: 30px;
+        width: 110px;
+        text-align: center;
+        padding-top:12px;
+        float: left;
+        margin-right: 10px;
+        color:#8F8F8F;
+    }
+    .zhongdian{
+        width: 1920px;
+        height: 800px;
+        position: relative;
+        top: 60px;
+        left: 370px;
+        padding-top: 20px;
+    }
+    
+    .hide{
+        width: 275px;
+        height: 45px;
+        padding-top: 5px;
+        background-color:#f5f5f5;
+        
+    }
+    .zhongdian .one:hover .fugai{
+        width: 275px;
+        height: 295px;
+        color:white;
+        font-size: 20px;
+        text-align: center;
+        background-color: rgba(0,0,0,0.60);
+        padding-top: 20px;
+    }
+    .zhongdian .two:hover .fugai{
+        width: 275px;
+        height: 295px;
+        color:white;
+        font-size: 20px;
+        text-align: center;
+        background-color: rgba(0,0,0,0.60);
+        padding-top: 20px;
+    }
+    .zhongdian .three:hover .fugai{
+        width: 275px;
+        height: 295px;
+        color:white;
+        font-size: 20px;
+        text-align: center;
+        background-color: rgba(0,0,0,0.60);
+        padding-top: 20px;
+    }
+    .zhongdian .four:hover .fugai{
+        width: 275px;
+        height: 295px;
+        color:white;
+        font-size: 20px;
+        text-align: center;
+        background-color: rgba(0,0,0,0.60);
+        padding-top: 20px;
+    }
+
+    .one{
+        width:275px;
+        height:295px;
+        text-align:center;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        border:1px solid #ccc;
+        padding-left: 1px;
+        float:left;
+    }
+    .two{
+        width:275px;
+        height:295px;
+        text-align:center;
+        border:1px solid #ccc;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        float:left;
+    }
+    .three{
+        width:275px;
+        height:295px;
+        text-align:center;
+        border:1px solid #ccc;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        float:left;
+    }
+    .four{
+        width:275px;
+        height:295px;
+        text-align:center;
+        border:1px solid #ccc;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        float:left;
+    }
+    .b{
+        margin-top: -20px;
+    }
+    .d{
+        margin-top: -240px;   
+    }
+    .f{
+        margin-top: -20px;
+    }
+    .h{
+        margin-top: -240px;
+    }
+    
+
+    .foot{
+        width:100%;
+        height:100px;
+        background-color:#f5f5f5; 
+    }
+    .foot1{
+        width: 1200px;
+        height:70px;
+        color:black;
+        padding-top:30px;
+        background-color: #f5f5f5;
+        margin: 0 auto;
+    }
+    .foot2{
+        width: 200px;
+        height: 50px;
+        margin: 0px 5px;
+        float:left;
+        padding-left:40px;
+        background-color: #f5f5f5;
+        border-right: 1px solid #C9C9C9;  
+    }
+    .tupian{
+        float: left;
+        margin-right: 20px;
+    }
+    .shang{
+        font-size: 20px;
+    }
+    .xia{
+        font-size:10px;
+    }
+    .foot3{
+        width:1920px;
+        height:100px;
+        color:white;
+        text-align:center;
+        background-color: #f5f5f5;
+    }
+    .foot4{
+        width: 1920px;
+        height: 80px;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 20px; 
+        background-color: #323232;  
+    }
+
+    </style>
+</head>
+<body>
+    <div class="shang">
+        <div class="head">
+            <span class="head1" style="color:#929292; font-size: 12px;">嘿，欢迎来买猜商城！&nbsp;&nbsp;&nbsp;</span>
+            <span>请登录&nbsp;&nbsp;&nbsp;免费注册&nbsp;&nbsp;&nbsp;</span>
+            <span class="abc">
+                <select >
+                    <option value="one" selected>我的订单</option>
+                </select>
+                <select >
+                    <option value="one" selected>我的买猜</option>
+                </select> 
+            </span> 
+            <span style="color:#929292; font-size:15px;">帮助中心&nbsp;&nbsp;</span>
+            <sapn><img src="大作业设计图/所需小图/wb.png" />&nbsp;&nbsp;</span>  
+            <span><img src="大作业设计图/所需小图/wx.png" /></span>
+        </div>
+        <div class="top">
+            <span><img class="logo" src="大作业设计图/所需小图/logo.png" alt="logo"/></span>
+            <span>
+                <div class="search">
+                    <input style="text" name="search" placeholder="请输入关键词"/>
+                </div>
+            </span>
+            <span><img class="sousuo" src="大作业设计图/所需小图/search.png" alt="search"/></span>
+            <span><img class="gouwuche " src="大作业设计图/所需小图/cart.png" alt="cart"/></span>
+        </div>  
+        <div class="fenlei">
+                <div class="all">
+                    <select>
+                        <option value="one" selected>全部商品分类&nbsp;&nbsp;&nbsp;</option>
+                    </select>
+                </div>
+                <div class="xuanxiang">
+                    <span class="choice" style="display:inline-block" ><a href="#">首页&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
+                    <span class="choice" style="display:inline-block" ><a href="#">名酒&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
+                    <span class="choice" style="display:inline-block" ><a href="#">茗茶&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
+                    <span class="choice" style="display:inline-block" ><a href="#">玉石&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
+                    <span class="choice" style="display:inline-block" ><a href="#">休闲食品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
+                    <span class="choice" style="display:inline-block" ><a href="#">洗护产品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
+                    <span class="choice" style="display:inline-block" ><a href="#">土特产&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
+                    <span class="choice" style="display:inline-block" ><a href="#">积分商城&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></span>
+                    <span class="choice" style="display:inline-block" ><a href="#">抽奖游戏</a></span>
+                </div>
+    
+        </div>
+
+        <div class="middle">
+            <div class="big">
+                <img src="大作业设计图/所需小图/banner.png">
+            </div>
+            <div class="small0">
+                <div class="small"><img src="大作业设计图/所需小图/cart1.png"/></div><hr/>
+                <div class="small"><img src="大作业设计图/所需小图/qq.png"/></div><hr/>
+                <div class="small"><img src="大作业设计图/所需小图/zuji.png"/></div><hr/>
+                <div class="small"><img src="大作业设计图/所需小图/erweima.png"/></div><hr/>
+                <div class="small"><img src="大作业设计图/所需小图/gotop.png"/></div>
+            </div>
+        </div>  
+    </div>
+    <div class="zhongjian">
+        <div classs="daohang">
+            <p style="color:balck;font-size:12px;">&nbsp;&nbsp;首页>玉石 </p>
+            <p class="shangpinshu">共200件相关商品</p>
+        </div>
+        <div class="biaoge">
+            <div class="diyige"><a href="#">玉石</a></div>
+            <div class="later"><a href="#">白玉</a></div>
+            <div class="later"><a href="#">碧玉</a></div>
+            <div class="later"><a href="#">黄玉</a></div>
+            <div class="later"><a href="#">和田玉</a></div>
+            <div class="later" ><a href="#" style="color:green;">翡翠</a></div>
+            <div class="later"><a href="#">绿松玉</a></div>
+            <div class="later"><a href="#">墨玉</a></div>
+        </div><br/>
+        <div class="biaoge">
+            <div class="diyige"><a href="#">其他</a></div>
+            <div class="later" ><a href="#" style="color:green">吊坠</a></div>
+            <div class="later"><a href="#">扳指</a></div>
+            <div class="later"><a href="#">手镯</a></div>
+        </div><br/>
+        <div class="biaoge">
+            <div class="diyige"><a href="#">地区</a></div>
+            <div class="later"><a href="#">北京</a></div>
+            <div class="later"><a href="#">安徽</a></div>
+            <div class="later"><a href="#">福建</a></div>
+            <div class="later"><a href="#">内蒙古</a></div>
+            <div class="later"><a href="#">宁夏</a></div>
+            <div class="later"><a href="#">黑龙江</a></div>
+            <div class="later"><a href="#">河北</a></div>
+            <div class="later" style="float: right; ">更多</div>
+        </div>
+            
+    </div>
+
+
+    <div class="zhongdian">
+             
+            <div class="one">
+                <div class="a">
+                    <img src="大作业设计图/所需小图/img1.png"/>
+                    <div class="hide" style="position:relative; top:-54px;">
+                        <p>竞猜价：¥399.00</p>
+                        <p>翡翠千手观音吊坠</p>
+                    </div>
+                    <div class="fugai" style="position: relative; top:-349px;">
+                        <p>竞猜价：¥399.00</p>
+                        <p>&nbsp;</p>
+                        <p>翡翠千手观音吊坠</p>
+                    </div>
+                </div>
+                <div class="b">
+                    <img src="大作业设计图/所需小图/img5.png" style="margin-top: 10px;"/>
+                    <div class="hide" style="position:relative; top:-37px;">
+                        <p>竞猜价：¥99.00</p>
+                        <p>翡翠婵吊坠</p>
+                    </div>
+                    <div class="fugai" style="position: relative; top:-350px;">
+                        <p>竞猜价：¥99.00</p>
+                        <br/>
+                        <p>翡翠婵吊坠</p>
+                   </div>
+                </div>
+            </div>
+
+
+            <div class="two">
+               <div class="c">
+                    <img src="大作业设计图/所需小图/img2.png" style="margin-top: 25px;"/>
+                    <div class="hide" style="position:relative; top:-18px;">
+                        <p>竞猜价：¥1980.00</p>
+                        <p>翡翠龙凤吊坠</p>
+                    </div>
+                    <div class="fugai" style="position: relative; top:-315px;">
+                        <p>竞猜价：¥1980.00</p>
+                        <br/>
+                        <p>翡翠龙凤吊坠</p>
+                    </div>
+                </div>
+                <div class="d">
+                    <img src="大作业设计图/所需小图/img6.png" style="margin-top: 35px;"/>
+                    <div class="hide" style="position:relative; top:-28px;">
+                        <p>竞猜价：¥199.00</p>
+                        <p>翡翠观音(浅色)吊坠</p>
+                     </div>
+                    <div class="fugai" style="position: relative; top:-340px;">
+                        <p>竞猜价：¥199.00</p>
+                        <br/>
+                        <p>翡翠观音(浅色)吊坠</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="three">
+                <div classs="e">
+                    <img src="大作业设计图/所需小图/img3.png" style="margin-top: 50px;"/>
+                    <div class="hide" style="position:relative; top:-15px;">
+                        <p>竞猜价：¥199.00</p>
+                        <p>翡翠花蕊吊坠</p>
+                    </div>
+                     <div class="fugai" style="position: relative; top:-313px;">
+                        <p>竞猜价：¥199.00</p>
+                        <br/>
+                        <p>翡翠花蕊吊坠</p>
+                    </div>
+                </div>
+                <div class="f">
+                    <img src="大作业设计图/所需小图/img7.png" style="margin-top: 45px;"/>
+                    <div class="hide" style="position:relative; top:-34px;">
+                        <p>竞猜价：¥99.00</p>
+                        <p>翡翠平安扣(深色)吊坠</p>
+                    </div>
+                    <div class="fugai" style="position: relative; top:-345px;">
+                        <p>竞猜价：¥99.00</p>
+                        <br/>
+                        <p>翡翠平安扣(深色)吊坠</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="four">
+               <div class="g">
+                    <img src="大作业设计图/所需小图/img4.png" style="margin-top: 50px;"/>
+                    <div class="hide" style="position:relative; top:-37px;">
+                        <p>竞猜价：¥199.00</p>
+                        <p>翡翠如意吊坠</p>
+                    </div>
+                    <div class="fugai" style="position: relative; top:-335px;">
+                        <p>竞猜价：¥199.00</p>
+                        <br/>
+                        <p>翡翠如意吊坠</p>
+                    </div>
+                </div>
+                <div class="h">
+                    <img src="大作业设计图/所需小图/img8.png" style="margin-top: 45px;"/>
+                     <div class="hide" style="position:relative; top:-30px;">
+                        <p>竞猜价：¥199.00</p>
+                        <p>翡翠如意吊坠</p>
+                    </div>
+                    <div class="fugai" style="position: relative; top:-345px;">
+                        <p>竞猜价：¥199.00</p>
+                        <br/>
+                        <p>翡翠如意吊坠</p>
+                    </div>
+                </div>
+            </div>
+    </div>  
+       
+    <div class="foot" >  
+        <div class="foot1">
+            <div class="foot2">
+                <img src="大作业设计图/所需小图/f1.png" class="tupian">
+                <p class="shang">资质认证</p><br/>
+                <p class="xia">服务商100%实名认证</p>
+            </div>
+            <div class="foot2">
+                <img src="大作业设计图/所需小图/f2.png" class="tupian">
+                <p class="shang">支付安全</p><br/>
+                <p class="xia">明码标价支付及信息安全</p>
+            </div>
+            <div class="foot2">
+                <img src="大作业设计图/所需小图/f3.png" class="tupian">
+                <p class="shang">保险赔付</p><br/>
+                <p class="xia">为您提供担保赔付</p>
+            </div>
+            <div class="foot2">
+                <img src="大作业设计图/所需小图/f4.png" class="tupian">
+                <p class="shang">售后无忧</p><br/>
+                <p class="xia">服务出问题经理全程跟进</p>
+            </div>
+        </div>
+    </div>
+    <div class="foot3">
+        <div class="foot4" style="display:inline-block;">
+            <p>
+                <span>首页&nbsp;&nbsp;|&nbsp;</span>
+                <span>工商代理&nbsp;|&nbsp;</span>
+                <span>财务代记账&nbsp;|&nbsp;</span>
+                <span>股权交易与变更&nbsp;|&nbsp;</span>
+                <span>企业贷款&nbsp;|&nbsp;</span>
+                <span>办公室租赁&nbsp;|&nbsp;</span>
+                <span>社保公积金代理&nbsp;|&nbsp;</span>
+                <span>&nbsp;法律服务</span>
+            </p>
+            <br/>
+            <p>&copy;2017-2018 买猜商城有限公司 版权所有</p>
+        </div>
+    </div>
+</body>
+</html>
